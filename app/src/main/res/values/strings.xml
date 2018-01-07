@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">kotlin</string>
+    <string name="search_hint">검색어를 입력해주세요.</string>
+    <string name="select_item_text">like 되었습니다</string>
+</resources>
