@@ -10,7 +10,7 @@ class LikeListAdapter(private val items: ArrayList<ItemModel>)
     : BaseListAdapter(items) {
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder?, position: Int) {
         super.onBindViewHolder(holder, position)
-        holder!!.itemView.setOnClickListener({
+        holder?.itemView?.setOnClickListener({
             EventBus.getDefault().post(Events.UnlikeItemSelect(items.get(position)))
         })
     }

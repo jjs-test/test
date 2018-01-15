@@ -79,8 +79,7 @@ class RequestBuilder {
     private fun getMessage(response: Response): String {
         var message = response.message()
         try {
-            val `object` = JSONObject(response.body()!!.string())
-            message = `object`.getString("message")
+            message = JSONObject(response.body()?.string()).getString("message")
         } catch (e: JSONException) {
             Log.d(TAG, "getMessage", e)
         } catch (e: IOException) {
